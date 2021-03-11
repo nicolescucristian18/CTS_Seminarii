@@ -43,6 +43,8 @@ public abstract class Aplicant{
 	
 
 	
+	
+	
 	public Aplicant() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -59,8 +61,14 @@ public abstract class Aplicant{
 	public int getNr_proiecte() {
 		return nr_proiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte) {
-		this.nr_proiecte = nr_proiecte;
+
+	
+	public String[] getDenumireProiect() {
+		return denumireProiect;
+	}
+	public void setDenumiriProiecte(String[] denumireProiect, int nr_proiect) {
+		this.nr_proiecte=nr_proiecte;
+		this.denumireProiect = denumireProiect;
 	}
 
 }
