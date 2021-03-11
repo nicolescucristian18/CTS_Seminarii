@@ -22,7 +22,7 @@ public class ElevReader extends AplicantReader{
 
 		while (input2.hasNext()) {
 			Elev elev=new Elev();
-			super.readeAplicant(input2, elev);
+			super.readAplicant(input2, elev);
 			int clasa = input2.nextInt();
 			String tutore = input2.next();
 			elev.setClasa(clasa);

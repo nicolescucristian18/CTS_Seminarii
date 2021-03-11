@@ -21,7 +21,7 @@ public class StudentReader extends AplicantReader{
 
 		while (input.hasNext()) {
 			Student student=new Student();
-			super.readeAplicant(input, student);
+			super.readAplicant(input, student);
 			int an_studii = input.nextInt();
 			String facultate = (input.next()).toString();
 			student.setAn_studii(an_studii);

@@ -14,7 +14,7 @@ public abstract class AplicantReader {
 		this.numeFisier=numeFisier;
 	}
 	
-	public void readeAplicant(Scanner input,Aplicant aplicant) {
+	public void readAplicant(Scanner input,Aplicant aplicant) {
 			String nume = input.next();
 			String prenume = input.next();
 			int varsta = input.nextInt();
