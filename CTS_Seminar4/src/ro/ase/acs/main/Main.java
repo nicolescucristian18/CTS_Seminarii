@@ -1,5 +1,6 @@
 package ro.ase.acs.main;
 
+import ro.ase.acs.clase.Banca;
 import ro.ase.acs.clase.DepartamentFinanciar;
 import ro.ase.acs.clase.DepartamentFinanciarEager;
 
@@ -22,6 +23,18 @@ public class Main {
 		
 		System.out.println(departamentFinanciar1.toString());
 		System.out.println(departamentFinanciar2.toString());
+		
+		Banca banca1=Banca.getInstance("BCR", 2000, 50000);
+		Banca banca2=Banca.getInstance("Transilvania", 1000, 40000);
+		
+		System.out.println(banca1.toString());
+		System.out.println(banca2.toString());
+		
+		banca1.setNrClienti(5000);
+		banca2.setFondCriza(100000);
+		
+		System.out.println(banca1.toString());
+		System.out.println(banca2.toString());
 	}
 
 }
