@@ -16,7 +16,7 @@ public class Client implements Flyweight{
 	}
 	@Override
 	public void printeazaRezervare(Rezervare rezervare) {
-		System.out.println(rezervare.toString());
+		System.out.println(this.toString()+rezervare.toString());
 		
 	}
 	
