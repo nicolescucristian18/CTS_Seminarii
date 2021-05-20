@@ -17,6 +17,8 @@ public class Main {
 		bilet4.setCodBilet(3);
 		bilet4.setLoc("2F");
 		
+		System.out.println(bilet.toString());
+		System.out.println(bilet2.toString());
 		System.out.println(bilet3.toString());
 		System.out.println(bilet4.toString());
 	}

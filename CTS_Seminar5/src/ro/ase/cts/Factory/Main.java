@@ -9,7 +9,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FactoryPersonal factoryPersonal= new FactoryAnestezist();
+		FactoryPersonal factoryPersonal= new FactoryAsistent();
 		printeazaPersonalSpital(factoryPersonal, "Ion", 1200);
 	}
 
