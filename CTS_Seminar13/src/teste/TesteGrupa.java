@@ -4,43 +4,22 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import categorii.TesteGetPromovabilitate;
+import categorii.TesteNormale;
+import categorii.TesteUrgente;
 import clase.Grupa;
 import clase.Student;
 
 public class TesteGrupa {
 	
-	Grupa grupa = null;
 	
-	@Before
-	public void setUp() {
-		grupa = new Grupa(1077);
-		for(int i =0;i<10;i++) {
-			Student student = new Student("Marcel");
-			student.adaugaNota(5);
-			student.adaugaNota(10);
-			student.adaugaNota(4);
-			grupa.adaugaStudent(student);
-		}
-	}
+	
+	
 	
 	@Test
-	public void testGetPromovabilitateRight() {
-		for(int i=0;i<2;i++) {
-			Student student = new Student("Marius");
-			student.adaugaNota(10);
-			grupa.adaugaStudent(student);
-		}
-		float promovabilitate = 0.16f;
-		assertEquals(promovabilitate, grupa.getPromovabilitate(), 0.05);
-	}
-	
-	@Test
-	public void testGetPromovabilitateLimitaInferioara() {
-		assertEquals(0, grupa.getPromovabilitate(), 0);
-	}
-	
-	@Test
+	@Category({TesteGetPromovabilitate.class,TesteNormale.class})
 	public void testGetPromovabilitateLimitaSuperioara() {
 		Grupa grupa = null;
 		grupa = new Grupa(1077);
@@ -55,25 +34,25 @@ public class TesteGrupa {
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
+	@Category({TesteGetPromovabilitate.class})
 	public void testGetPromovabilitateError() {
 		Grupa grupa = new Grupa(1077);
 		grupa.getPromovabilitate();
 	}
 	
-	@Test(timeout = 500)
-	public void testGetPromovabilitatePerformance() {
-		grupa.getPromovabilitate();
-	}
+	
 	
 	
 
 	@Test
+	@Category({TesteUrgente.class})
 	public void testConstructorRight() {
 		Grupa grupa = new Grupa(1077);
 		assertEquals(1077, grupa.getNrGrupa());
 	}
 
 	@Test
+	@Category({TesteNormale.class})
 	public void testLimitaInferiora() {
 		int nrGrupa = 1000;
 		Grupa grupa = new Grupa(nrGrupa);

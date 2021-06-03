@@ -3,7 +3,9 @@ package teste;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import categorii.TesteGetPromovabilitate;
 import clase.Grupa;
 import clase.IStudent;
 import dubluri.StudentStub;
@@ -11,6 +13,7 @@ import dubluri.StudentStub;
 public class TestGrupaWithStubStudent {
 
 	@Test
+	@Category({TesteGetPromovabilitate.class})
 	public void testGetPromovabilitateFaraRestantieri() {
 		Grupa grupa1= new Grupa(1077);
 		for(int i=0;i<10;i++) {
